@@ -436,7 +436,6 @@ body::before {
 .booking-card {
   background: #111216;
   border-radius: 16px;
-  box-shadow: 0 2px 32px 0 rgba(0,0,0,0.45);
   padding: 32px 32px 24px 32px;
   width: 340px;
   display: flex;
@@ -727,3 +726,27 @@ body::before {
     width: 80px;
   }
 } 
+/* Simple About page centering and padding */
+.about-hero, .about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.about-list {
+  display: inline-block;
+  text-align: left;
+  margin: 24px auto;
+  padding-left: 0;
+}
+
+.about-cta-bar {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.cta-main {
+  margin: 0 auto;
+  display: inline-block;
+}
