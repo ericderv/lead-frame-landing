@@ -13,23 +13,17 @@
     <nav class="navbar">
       <div class="logo" style="display:flex;align-items:center;gap:0.5rem;">
         <svg id="lf-monogram" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle">
-          <rect x="4" y="4" width="40" height="40" rx="10" stroke="#00e0ff" stroke-width="3" fill="none">
-            <animate attributeName="stroke-dasharray" from="0,160" to="160,0" dur="0.7s" fill="freeze" />
-          </rect>
-          <path d="M14 34V14H24" stroke="#00e0ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <animate attributeName="stroke-dasharray" from="0,40" to="40,0" dur="0.7s" begin="0.3s" fill="freeze" />
-          </path>
-          <path d="M34 34H24V24" stroke="#00e0ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <animate attributeName="stroke-dasharray" from="0,40" to="40,0" dur="0.7s" begin="0.5s" fill="freeze" />
-          </path>
+          <!-- Left side of M (darker blue) -->
+          <path d="M8 36L16 20L24 28" stroke="#14213d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- Right side of M with arrow (lighter blue) - ONLY GOING UP -->
+          <path d="M24 28L32 8" stroke="#00e0ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
-        <span class="logo-text">Lead Frame™</span>
+        <span class="logo-text">LEADFRAME</span>
       </div>
       <ul class="nav-links">
         <li><a href="#home" class="nav-btn active">Home</a></li>
         <li><a href="#work" class="nav-btn">Work</a></li>
         <li><a href="#resources" class="nav-btn">Resources</a></li>
-        <li><a href="#agency" class="nav-btn">Agency</a></li>
         <li><a href="#contact" class="nav-btn">Contact</a></li>
       </ul>
       <div class="nav-toggle">
@@ -40,246 +34,405 @@
     </nav>
   </header>
 
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1 class="hero-headline">
-        The Last Agency<br>
-        <span class="hero-headline-second">You'll Ever Need</span>
-      </h1>
-      <p class="hero-subtext">Lead Frame offers a comprehensive suite of marketing services, ensuring your business excels, without the hassle of multiple suppliers. Trust us to seamlessly handle it all.</p>
-      <a href="#contact" class="cta-btn">Let's Chat</a>
-    </div>
-    <div class="hero-background-image">
-      <div class="image-overlay"></div>
-    </div>
-  </div>
+  <main id="main-content"></main>
 
-  <section id="about" class="about-animated fade-in">
-    <svg class="about-divider about-divider-top" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,60 C480,0 960,120 1440,60 L1440,0 L0,0 Z" fill="#14213d" fill-opacity="1"/></svg>
-    <div class="about-content">
-      <div class="about-visual">
-        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="60" cy="60" r="54" stroke="#00e0ff" stroke-width="4" opacity="0.3">
-            <animate attributeName="r" values="54;58;54" dur="3s" repeatCount="indefinite" />
-          </circle>
-          <circle cx="60" cy="60" r="36" stroke="#00e0ff" stroke-width="3" opacity="0.5">
-            <animate attributeName="r" values="36;40;36" dur="2.5s" repeatCount="indefinite" />
-          </circle>
-          <circle cx="60" cy="60" r="18" fill="#00e0ff" opacity="0.7">
-            <animate attributeName="r" values="18;22;18" dur="2s" repeatCount="indefinite" />
-          </circle>
-        </svg>
+  <template id="page-home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-headline">
+          The Last Agency<br>
+          <span class="hero-headline-second">You'll Ever Need</span>
+        </h1>
+        <p class="hero-subtext">Lead Frame offers a comprehensive suite of marketing services, ensuring your business excels, without the hassle of multiple suppliers. Trust us to seamlessly handle it all.</p>
+        <a href="#contact" class="cta-btn">Let's Chat</a>
       </div>
-      <div class="about-text">
-        <h2>Who We Are</h2>
-        <p>Lead Frame is a creative digital agency focused on elevating brands through innovative social media strategies, bold content, and measurable results.</p>
+      <div class="hero-background-image">
+        <div class="image-overlay"></div>
       </div>
     </div>
-    <svg class="about-divider about-divider-bottom" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0 C480,60 960,-60 1440,0 L1440,60 L0,60 Z" fill="#14213d" fill-opacity="1"/></svg>
-  </section>
-
-  <section id="services" class="services center-text">
-    <h2>Our Services</h2>
-    <div class="service-list">
-      <div class="service-card" data-service="social">
-        <div class="service-icon">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="30" cy="30" r="25" stroke="#00e0ff" stroke-width="3" fill="none">
-              <animate attributeName="stroke-dasharray" from="0,157" to="157,0" dur="1.5s" fill="freeze" />
-            </svg>
-            <div class="metric-counter">
-              <span class="counter" data-target="340">0</span>%
-            </div>
+    <section id="about" class="about-clean fade-in">
+      <div class="about-content">
+        <div class="about-visual">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="54" stroke="#00e0ff" stroke-width="4" opacity="0.3">
+              <animate attributeName="r" values="54;58;54" dur="3s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="60" cy="60" r="36" stroke="#00e0ff" stroke-width="3" opacity="0.5">
+              <animate attributeName="r" values="36;40;36" dur="2.5s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="60" cy="60" r="18" fill="#00e0ff" opacity="0.7">
+              <animate attributeName="r" values="18;22;18" dur="2s" repeatCount="indefinite" />
+            </circle>
           </svg>
         </div>
-        <h3>Social Media Management</h3>
-        <p class="service-stats">Increased engagement by <span class="highlight">340%</span> in 3 months</p>
-        <div class="service-details">
-          <div class="metric">
-            <span class="metric-number" data-target="15">0</span>
-            <span class="metric-label">Posts/Day</span>
-          </div>
-          <div class="metric">
-            <span class="metric-number" data-target="89">0</span>%
-            <span class="metric-label">Engagement Rate</span>
-          </div>
-        </div>
-        <div class="hover-content">
-          <h4>What We Deliver:</h4>
-          <ul>
-            <li>Daily content creation & scheduling</li>
-            <li>Community management & engagement</li>
-            <li>Performance analytics & optimization</li>
-            <li>Brand voice & strategy development</li>
-          </ul>
+        <div class="about-text">
+          <h2>Who We Are</h2>
+          <p>Lead Frame is a creative digital agency focused on elevating brands through innovative social media strategies, bold content, and measurable results.</p>
         </div>
       </div>
-
-      <div class="service-card" data-service="content">
-        <div class="service-icon">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="15" y="15" width="30" height="30" rx="4" stroke="#00e0ff" stroke-width="3" fill="none">
-              <animate attributeName="stroke-dasharray" from="0,120" to="120,0" dur="1.5s" fill="freeze" />
-            </svg>
-            <div class="metric-counter">
-              <span class="counter" data-target="2100000">0</span>M+
+    </section>
+    <section id="services" class="services-luxury">
+      <div class="services-hero">
+        <h2 class="services-title">Our Services</h2>
+        <p class="services-subtitle">Transforming brands through innovative digital strategies</p>
+      </div>
+      
+      <div class="luxury-services-grid">
+        <div class="luxury-service-card" data-service="social">
+          <div class="service-glow"></div>
+          <div class="service-content">
+            <div class="service-header">
+              <div class="service-icon-luxury">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="40" cy="40" r="35" stroke="#00e0ff" stroke-width="3" fill="none" opacity="0.8">
+                    <animate attributeName="stroke-dasharray" from="0,220" to="220,0" dur="2s" fill="freeze" />
+                  </svg>
+                  <div class="metric-display">
+                    <span class="luxury-counter" data-target="340">0</span>
+                    <span class="metric-unit">%</span>
+                  </div>
+                </svg>
+              </div>
+              <div class="service-title-group">
+                <h3>Social Media Management</h3>
+                <div class="service-badge">Premium</div>
+              </div>
             </div>
-          </svg>
-        </div>
-        <h3>Content Creation</h3>
-        <p class="service-stats">Generated <span class="highlight">2.1M+</span> impressions across campaigns</p>
-        <div class="service-details">
-          <div class="metric">
-            <span class="metric-number" data-target="45">0</span>
-            <span class="metric-label">Content Pieces</span>
-          </div>
-          <div class="metric">
-            <span class="metric-number" data-target="156">0</span>%
-            <span class="metric-label">Brand Recognition</span>
-          </div>
-        </div>
-        <div class="hover-content">
-          <h4>What We Create:</h4>
-          <ul>
-            <li>Eye-catching visual content</li>
-            <li>Engaging copy & captions</li>
-            <li>Video & animation content</li>
-            <li>Brand-consistent messaging</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="service-card" data-service="ads">
-        <div class="service-icon">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 30 L30 15 L45 30 L30 45 Z" stroke="#00e0ff" stroke-width="3" fill="none">
-              <animate attributeName="stroke-dasharray" from="0,120" to="120,0" dur="1.5s" fill="freeze" />
-            </svg>
-            <div class="metric-counter">
-              <span class="counter" data-target="420">0</span>x
+            
+            <div class="service-stats-luxury">
+              <p>Increased engagement by <span class="highlight-glow">340%</span> in 3 months</p>
             </div>
-          </svg>
-        </div>
-        <h3>Paid Advertising</h3>
-        <p class="service-stats">Achieved <span class="highlight">4.2x ROI</span> on ad spend</p>
-        <div class="service-details">
-          <div class="metric">
-            <span class="metric-number" data-target="67">0</span>%
-            <span class="metric-label">Cost Reduction</span>
+            
+            <div class="metrics-grid">
+              <div class="luxury-metric">
+                <span class="metric-value" data-target="15">0</span>
+                <span class="metric-label">Posts/Day</span>
+              </div>
+              <div class="luxury-metric">
+                <span class="metric-value" data-target="89">0</span>
+                <span class="metric-label">Engagement Rate</span>
+              </div>
+            </div>
+            
+            <div class="service-features">
+              <div class="feature-item">
+                <span class="feature-icon">✨</span>
+                <span>Daily content creation</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">📊</span>
+                <span>Performance analytics</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🎯</span>
+                <span>Community management</span>
+              </div>
+            </div>
           </div>
-          <div class="metric">
-            <span class="metric-number" data-target="890">0</span>%
-            <span class="metric-label">Conversion Rate</span>
+        </div>
+        
+        <div class="luxury-service-card" data-service="content">
+          <div class="service-glow"></div>
+          <div class="service-content">
+            <div class="service-header">
+              <div class="service-icon-luxury">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="20" y="20" width="40" height="40" rx="6" stroke="#00e0ff" stroke-width="3" fill="none" opacity="0.8">
+                    <animate attributeName="stroke-dasharray" from="0,160" to="160,0" dur="2s" fill="freeze" />
+                  </svg>
+                  <div class="metric-display">
+                    <span class="luxury-counter" data-target="2100000">0</span>
+                    <span class="metric-unit">M+</span>
+                  </div>
+                </svg>
+              </div>
+              <div class="service-title-group">
+                <h3>Content Creation</h3>
+                <div class="service-badge">Creative</div>
+              </div>
+            </div>
+            
+            <div class="service-stats-luxury">
+              <p>Generated <span class="highlight-glow">2.1M+</span> impressions across campaigns</p>
+            </div>
+            
+            <div class="metrics-grid">
+              <div class="luxury-metric">
+                <span class="metric-value" data-target="45">0</span>
+                <span class="metric-label">Content Pieces</span>
+              </div>
+              <div class="luxury-metric">
+                <span class="metric-value" data-target="156">0</span>
+                <span class="metric-label">Brand Recognition</span>
+              </div>
+            </div>
+            
+            <div class="service-features">
+              <div class="feature-item">
+                <span class="feature-icon">🎨</span>
+                <span>Visual content creation</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✍️</span>
+                <span>Engaging copywriting</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🎬</span>
+                <span>Video & animation</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="hover-content">
-          <h4>What We Optimize:</h4>
-          <ul>
-            <li>Targeted audience campaigns</li>
-            <li>Budget optimization & scaling</li>
-            <li>A/B testing & performance</li>
-            <li>Conversion tracking & analytics</li>
-          </ul>
+        
+        <div class="luxury-service-card" data-service="ads">
+          <div class="service-glow"></div>
+          <div class="service-content">
+            <div class="service-header">
+              <div class="service-icon-luxury">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 40 L40 20 L60 40 L40 60 Z" stroke="#00e0ff" stroke-width="3" fill="none" opacity="0.8">
+                    <animate attributeName="stroke-dasharray" from="0,160" to="160,0" dur="2s" fill="freeze" />
+                  </svg>
+                  <div class="metric-display">
+                    <span class="luxury-counter" data-target="420">0</span>
+                    <span class="metric-unit">x</span>
+                  </div>
+                </svg>
+              </div>
+              <div class="service-title-group">
+                <h3>Paid Advertising</h3>
+                <div class="service-badge">ROI</div>
+              </div>
+            </div>
+            
+            <div class="service-stats-luxury">
+              <p>Achieved <span class="highlight-glow">4.2x ROI</span> on ad spend</p>
+            </div>
+            
+            <div class="metrics-grid">
+              <div class="luxury-metric">
+                <span class="metric-value" data-target="67">0</span>
+                <span class="metric-label">Cost Reduction</span>
+              </div>
+              <div class="luxury-metric">
+                <span class="metric-value" data-target="890">0</span>
+                <span class="metric-label">Conversion Rate</span>
+              </div>
+            </div>
+            
+            <div class="service-features">
+              <div class="feature-item">
+                <span class="feature-icon">🎯</span>
+                <span>Targeted campaigns</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">📈</span>
+                <span>Budget optimization</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🔍</span>
+                <span>A/B testing</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section id="testimonials" class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-list">
+        <div class="testimonial-item">
+          <p>"ForgeClick Media transformed our online presence. Our engagement has never been higher!"</p>
+          <span>- Alex, Startup Founder</span>
+        </div>
+        <div class="testimonial-item">
+          <p>"Professional, creative, and always on top of trends. Highly recommend!"</p>
+          <span>- Jamie, Marketing Director</span>
+        </div>
+      </div>
+    </section>
 
-  <section id="resources" class="resources">
-    <div class="resources-header">
-      <h2>All Resources</h2>
-    </div>
-    <div class="resources-list">
-      <div class="resource-item">
-        <div class="resource-number">001</div>
-        <div class="resource-content">
-          <h3>How Can I Know a Social Media Agency is "The One"?</h3>
-          <p>Choosing a social media agency? Discover key tips to make the right choice. Contact us today to know more!</p>
-        </div>
-      </div>
-      <div class="resource-item">
-        <div class="resource-number">002</div>
-        <div class="resource-content">
-          <h3>Crafting a Bold Digital Presence for Lead Frame</h3>
-          <p>Lead Frame is a creative digital agency focused on elevating brands through innovative social media strategies.</p>
-        </div>
-      </div>
-      <div class="resource-item">
-        <div class="resource-number">003</div>
-        <div class="resource-content">
-          <h3>The Ultimate Guide to Social Media ROI</h3>
-          <p>Learn how to measure and maximize your social media return on investment with proven strategies and tools.</p>
-        </div>
-      </div>
-      <div class="resource-item">
-        <div class="resource-number">004</div>
-        <div class="resource-content">
-          <h3>Content Creation That Converts</h3>
-          <p>Discover the secrets behind creating engaging content that drives engagement and generates real business results.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </template>
 
-  <section id="portfolio" class="portfolio">
-    <h2>Our Work</h2>
-    <div class="portfolio-list">
-      <div class="portfolio-item">
-        <div class="portfolio-visual">
-          <img src="startup.jpg" alt="Tech Startup Brand Launch" class="portfolio-photo" />
-          <div class="portfolio-overlay">
-            <span class="portfolio-stats">+340% Engagement</span>
+  <template id="page-work">
+    <section id="portfolio" class="portfolio">
+      <h2>Our Work</h2>
+      <div class="portfolio-list">
+        <div class="portfolio-item">
+          <div class="portfolio-visual">
+            <img src="startup.jpg" alt="Tech Startup Brand Launch" class="portfolio-photo" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-stats">+340% Engagement</span>
+            </div>
+          </div>
+          <h4>Tech Startup Brand Launch</h4>
+          <p>Complete social media strategy and content creation for a Series A tech startup, achieving viral growth and 340% engagement increase.</p>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-visual">
+            <img src="ecommerce.jpg" alt="E-commerce Growth Campaign" class="portfolio-photo" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-stats">2.1M+ Reach</span>
+            </div>
+          </div>
+          <h4>E-commerce Growth Campaign</h4>
+          <p>Multi-platform advertising campaign for luxury fashion brand, generating 2.1M+ impressions and 4.2x ROI on ad spend.</p>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-visual">
+            <img src="b2b.jpg" alt="B2B Lead Generation" class="portfolio-photo" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-stats">890% Conversion</span>
+            </div>
+          </div>
+          <h4>B2B Lead Generation</h4>
+          <p>Targeted LinkedIn and Facebook campaigns for SaaS company, achieving 890% increase in qualified leads and 67% cost reduction.</p>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="page-resources">
+    <section id="resources" class="resources">
+      <div class="resources-header">
+        <h2>All Resources</h2>
+      </div>
+      <div class="resources-list">
+        <div class="resource-item">
+          <div class="resource-number">001</div>
+          <div class="resource-content">
+            <h3>How Can I Know a Social Media Agency is "The One"?</h3>
+            <p>Choosing a social media agency? Discover key tips to make the right choice. Contact us today to know more!</p>
           </div>
         </div>
-        <h4>Tech Startup Brand Launch</h4>
-        <p>Complete social media strategy and content creation for a Series A tech startup, achieving viral growth and 340% engagement increase.</p>
-      </div>
-      <div class="portfolio-item">
-        <div class="portfolio-visual">
-          <img src="ecommerce.jpg" alt="E-commerce Growth Campaign" class="portfolio-photo" />
-          <div class="portfolio-overlay">
-            <span class="portfolio-stats">2.1M+ Reach</span>
+        <div class="resource-item">
+          <div class="resource-number">002</div>
+          <div class="resource-content">
+            <h3>Crafting a Bold Digital Presence for Lead Frame</h3>
+            <p>Lead Frame is a creative digital agency focused on elevating brands through innovative social media strategies.</p>
           </div>
         </div>
-        <h4>E-commerce Growth Campaign</h4>
-        <p>Multi-platform advertising campaign for luxury fashion brand, generating 2.1M+ impressions and 4.2x ROI on ad spend.</p>
-      </div>
-      <div class="portfolio-item">
-        <div class="portfolio-visual">
-          <img src="b2b.jpg" alt="B2B Lead Generation" class="portfolio-photo" />
-          <div class="portfolio-overlay">
-            <span class="portfolio-stats">890% Conversion</span>
+        <div class="resource-item">
+          <div class="resource-number">003</div>
+          <div class="resource-content">
+            <h3>The Ultimate Guide to Social Media ROI</h3>
+            <p>Learn how to measure and maximize your social media return on investment with proven strategies and tools.</p>
           </div>
         </div>
-        <h4>B2B Lead Generation</h4>
-        <p>Targeted LinkedIn and Facebook campaigns for SaaS company, achieving 890% increase in qualified leads and 67% cost reduction.</p>
+        <div class="resource-item">
+          <div class="resource-number">004</div>
+          <div class="resource-content">
+            <h3>Content Creation That Converts</h3>
+            <p>Discover the secrets behind creating engaging content that drives engagement and generates real business results.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </template>
 
-  <section id="testimonials" class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial-list">
-      <div class="testimonial-item">
-        <p>"ForgeClick Media transformed our online presence. Our engagement has never been higher!"</p>
-        <span>- Alex, Startup Founder</span>
+  <template id="page-contact">
+    <section id="contact" class="contact-luxury">
+      <div class="contact-hero">
+        <div class="contact-hero-bg">
+          <div class="gradient-overlay"></div>
+          <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+        </div>
+        <div class="contact-hero-content">
+          <h1 class="contact-title">Let's Create Something<br><span class="accent-text">Extraordinary</span></h1>
+          <p class="contact-subtitle">Ready to transform your brand? We're here to make it happen.</p>
+        </div>
       </div>
-      <div class="testimonial-item">
-        <p>"Professional, creative, and always on top of trends. Highly recommend!"</p>
-        <span>- Jamie, Marketing Director</span>
+      
+      <div class="contact-main">
+        <div class="contact-grid">
+          <div class="contact-info-panel">
+            <div class="info-card">
+              <div class="info-icon">📍</div>
+              <h3>Visit Us</h3>
+              <p>123 Main Street, Suite 400<br>New York, NY 10001</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">📧</div>
+              <h3>Email Us</h3>
+              <p><a href="mailto:hello@leadframe.com">hello@leadframe.com</a></p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">📱</div>
+              <h3>Call Us</h3>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          
+          <div class="contact-form-panel">
+            <div class="form-container">
+              <div class="form-header">
+                <h2>Start Your Project</h2>
+                <p>Tell us about your vision</p>
+              </div>
+              
+              <form class="luxury-contact-form" id="luxury-contact-form" autocomplete="off">
+                <div class="form-row">
+                  <div class="input-field">
+                    <input type="text" name="name" id="name" required>
+                    <label for="name">Full Name</label>
+                    <div class="input-line"></div>
+                  </div>
+                  <div class="input-field">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email Address</label>
+                    <div class="input-line"></div>
+                  </div>
+                </div>
+                
+                <div class="input-field">
+                  <input type="text" name="company" id="company">
+                  <label for="company">Company (Optional)</label>
+                  <div class="input-line"></div>
+                </div>
+                
+                <div class="input-field">
+                  <select name="service" id="service" required>
+                    <option value="" disabled selected>Select Service</option>
+                    <option value="social-media">Social Media Management</option>
+                    <option value="content-creation">Content Creation</option>
+                    <option value="paid-advertising">Paid Advertising</option>
+                    <option value="brand-strategy">Brand Strategy</option>
+                    <option value="consultation">Consultation</option>
+                  </select>
+                  <div class="input-line"></div>
+                </div>
+                
+                <div class="input-field">
+                  <textarea name="message" id="message" rows="4" required></textarea>
+                  <label for="message">Project Details</label>
+                  <div class="input-line"></div>
+                </div>
+                
+                <button type="submit" class="luxury-submit-btn">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-icon">→</span>
+                </button>
+              </form>
+              
+              <div id="luxury-success" class="luxury-success" style="display:none;">
+                <div class="success-check">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3>Message Sent Successfully!</h3>
+                <p>We'll get back to you within 24 hours.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    </section>
+  </template>
 
   <footer>
     <div class="footer-content">

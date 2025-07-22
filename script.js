@@ -137,6 +137,135 @@ function scrollToContact() {
     }
 }
 
+// SPA Navigation
+function loadPage(pageId) {
+  const main = document.getElementById('main-content');
+  const template = document.getElementById('page-' + pageId);
+  if (main && template) {
+    main.innerHTML = template.innerHTML;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Center all text in main
+    main.style.textAlign = 'center';
+  }
+  // Highlight active nav link
+  document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+  const navBtn = document.querySelector('.nav-btn[href="#' + pageId + '"]');
+  if (navBtn) navBtn.classList.add('active');
+}
+
+// Unique Contact Form Interactivity
+function setupContactForm() {
+  const form = document.getElementById('unique-contact-form');
+  const success = document.getElementById('contact-success');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    form.style.display = 'none';
+    if (success) success.style.display = 'flex';
+    setTimeout(() => {
+      if (form) form.reset();
+      if (success) success.style.display = 'none';
+      form.style.display = 'flex';
+    }, 3500);
+  });
+  // Animated input highlights
+  form.querySelectorAll('input, textarea').forEach(input => {
+    input.addEventListener('focus', function() {
+      input.parentElement.classList.add('focused');
+    });
+    input.addEventListener('blur', function() {
+      input.parentElement.classList.remove('focused');
+    });
+  });
+}
+
+// Luxury Contact Form Interactivity
+function setupLuxuryContactForm() {
+  const form = document.getElementById('luxury-contact-form');
+  const success = document.getElementById('luxury-success');
+  
+  if (!form) return;
+  
+  // Form submission
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Hide form and show success
+    form.style.display = 'none';
+    if (success) {
+      success.style.display = 'block';
+    }
+    
+    // Reset form after delay
+    setTimeout(() => {
+      if (form) {
+        form.reset();
+        form.style.display = 'flex';
+      }
+      if (success) {
+        success.style.display = 'none';
+      }
+    }, 4000);
+  });
+  
+  // Input field animations
+  form.querySelectorAll('input, textarea, select').forEach(input => {
+    input.addEventListener('focus', function() {
+      this.parentElement.classList.add('focused');
+    });
+    
+    input.addEventListener('blur', function() {
+      if (!this.value) {
+        this.parentElement.classList.remove('focused');
+      }
+    });
+    
+    // Handle select elements
+    if (input.tagName === 'SELECT') {
+      input.addEventListener('change', function() {
+        if (this.value) {
+          this.parentElement.classList.add('focused');
+        }
+      });
+    }
+  });
+}
+
+// Re-setup contact form on SPA navigation
+const origLoadPage = window.loadPage;
+window.loadPage = function(pageId) {
+  origLoadPage(pageId);
+  if (pageId === 'contact' || pageId === 'home') {
+    setupContactForm();
+  }
+};
+
+// Re-setup luxury contact form on SPA navigation
+const origLuxLoadPage = window.loadPage;
+window.loadPage = function(pageId) {
+  origLuxLoadPage(pageId);
+  if (pageId === 'contact' || pageId === 'home') {
+    setupLuxuryContactForm();
+  }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  // SPA nav event listeners
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const href = btn.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const page = href.replace('#', '');
+        loadPage(page);
+      }
+    });
+  });
+  // Load home page by default
+  loadPage('home');
+  setupContactForm();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   // Add animation classes to sections
   document.querySelector('.hero-content').classList.add('slide-up');
