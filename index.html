@@ -236,6 +236,59 @@
             </div>
           </div>
         </div>
+        
+        <div class="luxury-service-card" data-service="strategy">
+          <div class="service-glow"></div>
+          <div class="service-content">
+            <div class="service-header">
+              <div class="service-icon-luxury">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 20 L40 40 L60 20" stroke="#00e0ff" stroke-width="3" fill="none" opacity="0.8">
+                    <animate attributeName="stroke-dasharray" from="0,120" to="120,0" dur="2s" fill="freeze" />
+                  </svg>
+                  <div class="metric-display">
+                    <span class="luxury-counter" data-target="95">0</span>
+                    <span class="metric-unit">%</span>
+                  </div>
+                </svg>
+              </div>
+              <div class="service-title-group">
+                <h3>Brand Strategy & Consulting</h3>
+                <div class="service-badge">Strategic</div>
+              </div>
+            </div>
+            
+            <div class="service-stats-luxury">
+              <p>Improved brand positioning by <span class="highlight-glow">95%</span> clarity</p>
+            </div>
+            
+            <div class="metrics-grid">
+              <div class="luxury-metric">
+                <span class="metric-value" data-target="12">0</span>
+                <span class="metric-label">Brand Audits</span>
+              </div>
+              <div class="luxury-metric">
+                <span class="metric-value" data-target="78">0</span>
+                <span class="metric-label">Market Share</span>
+              </div>
+            </div>
+            
+            <div class="service-features">
+              <div class="feature-item">
+                <span class="feature-icon">🎯</span>
+                <span>Brand positioning</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">📋</span>
+                <span>Market research</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">💡</span>
+                <span>Growth strategy</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="testimonials" class="testimonials">
@@ -255,39 +308,252 @@
   </template>
 
   <template id="page-work">
-    <section id="portfolio" class="portfolio">
-      <h2>Our Work</h2>
-      <div class="portfolio-list">
-        <div class="portfolio-item">
-          <div class="portfolio-visual">
-            <img src="startup.jpg" alt="Tech Startup Brand Launch" class="portfolio-photo" />
-            <div class="portfolio-overlay">
-              <span class="portfolio-stats">+340% Engagement</span>
+    <section class="work-hero">
+      <div class="work-hero-content">
+        <h1 class="work-title">Our Portfolio</h1>
+        <p class="work-subtitle">Transforming brands through strategic digital excellence</p>
+        <div class="work-stats">
+          <div class="work-stat">
+            <span class="stat-number" data-target="15">0</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="work-stat">
+            <span class="stat-number" data-target="340">0</span>
+            <span class="stat-label">Avg. Engagement %</span>
+          </div>
+          <div class="work-stat">
+            <span class="stat-number" data-target="2100000">0</span>
+            <span class="stat-label">Total Reach</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-showcase">
+      <div class="showcase-grid">
+        <div class="showcase-item luxury" data-category="tech">
+          <div class="showcase-visual">
+            <div class="showcase-image">
+              <img src="startup.jpg" alt="Tech Startup Brand Launch" />
+              <div class="showcase-overlay">
+                <div class="overlay-content">
+                  <span class="category-badge">Tech Startup</span>
+                  <h3>Series A Brand Launch</h3>
+                  <div class="overlay-stats">
+                    <div class="overlay-stat">
+                      <span class="stat-value">+340%</span>
+                      <span class="stat-label">Engagement</span>
+                    </div>
+                    <div class="overlay-stat">
+                      <span class="stat-value">2.1M+</span>
+                      <span class="stat-label">Reach</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <h4>Tech Startup Brand Launch</h4>
-          <p>Complete social media strategy and content creation for a Series A tech startup, achieving viral growth and 340% engagement increase.</p>
-        </div>
-        <div class="portfolio-item">
-          <div class="portfolio-visual">
-            <img src="ecommerce.jpg" alt="E-commerce Growth Campaign" class="portfolio-photo" />
-            <div class="portfolio-overlay">
-              <span class="portfolio-stats">2.1M+ Reach</span>
+          <div class="showcase-content">
+            <div class="showcase-header">
+              <span class="showcase-category">Technology</span>
+              <h3>Tech Startup Brand Launch</h3>
+            </div>
+            <p class="showcase-description">Complete social media strategy and content creation for a Series A tech startup, achieving viral growth and 340% engagement increase.</p>
+            <div class="showcase-metrics">
+              <div class="metric-item">
+                <span class="metric-icon">📈</span>
+                <div class="metric-details">
+                  <span class="metric-value">340%</span>
+                  <span class="metric-label">Engagement Increase</span>
+                </div>
+              </div>
+              <div class="metric-item">
+                <span class="metric-icon">🎯</span>
+                <div class="metric-details">
+                  <span class="metric-value">2.1M+</span>
+                  <span class="metric-label">Total Reach</span>
+                </div>
+              </div>
+              <div class="metric-item">
+                <span class="metric-icon">⚡</span>
+                <div class="metric-details">
+                  <span class="metric-value">3 Months</span>
+                  <span class="metric-label">Timeframe</span>
+                </div>
+              </div>
             </div>
           </div>
-          <h4>E-commerce Growth Campaign</h4>
-          <p>Multi-platform advertising campaign for luxury fashion brand, generating 2.1M+ impressions and 4.2x ROI on ad spend.</p>
         </div>
-        <div class="portfolio-item">
-          <div class="portfolio-visual">
-            <img src="b2b.jpg" alt="B2B Lead Generation" class="portfolio-photo" />
-            <div class="portfolio-overlay">
-              <span class="portfolio-stats">890% Conversion</span>
+
+        <div class="showcase-item luxury" data-category="ecommerce">
+          <div class="showcase-visual">
+            <div class="showcase-image">
+              <img src="ecommerce.jpg" alt="E-commerce Growth Campaign" />
+              <div class="showcase-overlay">
+                <div class="overlay-content">
+                  <span class="category-badge">E-commerce</span>
+                  <h3>Luxury Fashion Campaign</h3>
+                  <div class="overlay-stats">
+                    <div class="overlay-stat">
+                      <span class="stat-value">4.2x</span>
+                      <span class="stat-label">ROI</span>
+                    </div>
+                    <div class="overlay-stat">
+                      <span class="stat-value">890%</span>
+                      <span class="stat-label">Conversion</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <h4>B2B Lead Generation</h4>
-          <p>Targeted LinkedIn and Facebook campaigns for SaaS company, achieving 890% increase in qualified leads and 67% cost reduction.</p>
+          <div class="showcase-content">
+            <div class="showcase-header">
+              <span class="showcase-category">E-commerce</span>
+              <h3>E-commerce Growth Campaign</h3>
+            </div>
+            <p class="showcase-description">Multi-platform advertising campaign for luxury fashion brand, generating 2.1M+ impressions and 4.2x ROI on ad spend.</p>
+            <div class="showcase-metrics">
+              <div class="metric-item">
+                <span class="metric-icon">💰</span>
+                <div class="metric-details">
+                  <span class="metric-value">4.2x</span>
+                  <span class="metric-label">ROI on Ad Spend</span>
+                </div>
+              </div>
+              <div class="metric-item">
+                <span class="metric-icon">📊</span>
+                <div class="metric-details">
+                  <span class="metric-value">2.1M+</span>
+                  <span class="metric-label">Impressions</span>
+                </div>
+              </div>
+              <div class="metric-item">
+                <span class="metric-icon">🎯</span>
+                <div class="metric-details">
+                  <span class="metric-value">890%</span>
+                  <span class="metric-label">Conversion Rate</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="showcase-item luxury" data-category="b2b">
+          <div class="showcase-visual">
+            <div class="showcase-image">
+              <img src="b2b.jpg" alt="B2B Lead Generation" />
+              <div class="showcase-overlay">
+                <div class="overlay-content">
+                  <span class="category-badge">B2B SaaS</span>
+                  <h3>Lead Generation Campaign</h3>
+                  <div class="overlay-stats">
+                    <div class="overlay-stat">
+                      <span class="stat-value">890%</span>
+                      <span class="stat-label">Lead Increase</span>
+                    </div>
+                    <div class="overlay-stat">
+                      <span class="stat-value">67%</span>
+                      <span class="stat-label">Cost Reduction</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-content">
+            <div class="showcase-header">
+              <span class="showcase-category">B2B SaaS</span>
+              <h3>B2B Lead Generation</h3>
+            </div>
+            <p class="showcase-description">Targeted LinkedIn and Facebook campaigns for SaaS company, achieving 890% increase in qualified leads and 67% cost reduction.</p>
+            <div class="showcase-metrics">
+              <div class="metric-item">
+                <span class="metric-icon">📈</span>
+                <div class="metric-details">
+                  <span class="metric-value">890%</span>
+                  <span class="metric-label">Lead Increase</span>
+                </div>
+              </div>
+              <div class="metric-item">
+                <span class="metric-icon">💰</span>
+                <div class="metric-details">
+                  <span class="metric-value">67%</span>
+                  <span class="metric-label">Cost Reduction</span>
+                </div>
+              </div>
+              <div class="metric-item">
+                <span class="metric-icon">🎯</span>
+                <div class="metric-details">
+                  <span class="metric-value">LinkedIn</span>
+                  <span class="metric-label">Primary Platform</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-item luxury" data-category="healthcare">
+          <div class="showcase-visual">
+            <div class="showcase-image">
+              <img src="healthcare.jpg" alt="Healthcare Brand Transformation" />
+              <div class="showcase-overlay">
+                <div class="overlay-content">
+                  <span class="category-badge">Healthcare</span>
+                  <h3>Digital Transformation Campaign</h3>
+                  <div class="overlay-stats">
+                    <div class="overlay-stat">
+                      <span class="stat-value">156%</span>
+                      <span class="stat-label">Brand Awareness</span>
+                    </div>
+                    <div class="overlay-stat">
+                      <span class="stat-value">2.8x</span>
+                      <span class="stat-label">Patient Engagement</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-content">
+            <div class="showcase-header">
+              <span class="showcase-category">Healthcare</span>
+              <h3>Healthcare Brand Transformation</h3>
+            </div>
+            <p class="showcase-description">Complete digital transformation for a healthcare provider, including social media strategy, patient engagement campaigns, and brand positioning that increased patient trust and engagement.</p>
+            <div class="showcase-metrics">
+              <div class="metric-item">
+                <span class="metric-icon">🏥</span>
+                <div class="metric-details">
+                  <span class="metric-value">156%</span>
+                  <span class="metric-label">Brand Awareness</span>
+                </div>
+              </div>
+              <div class="metric-item">
+                <span class="metric-icon">📈</span>
+                <div class="metric-details">
+                  <span class="metric-value">2.8x</span>
+                  <span class="metric-label">Patient Engagement</span>
+                </div>
+              </div>
+              <div class="metric-item">
+                <span class="metric-icon">💙</span>
+                <div class="metric-details">
+                  <span class="metric-value">94%</span>
+                  <span class="metric-label">Trust Score</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-cta">
+      <div class="cta-content">
+        <h2>Ready to Transform Your Brand?</h2>
+        <p>Let's create something extraordinary together</p>
+        <a href="#contact" class="cta-btn luxury">Start Your Project</a>
       </div>
     </section>
   </template>
